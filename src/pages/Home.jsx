@@ -12,10 +12,70 @@ function Home() {
   const selectCategory = [
     { name: "Any Category", label: "Any Category", value: "any" },
     { name: "General Knowledge", label: "General Knowledge", value: "9" },
-    { name: "Entertainment: Books", label: "Entertainment: Books", value: "10" },
+    {
+      name: "Entertainment: Books",
+      label: "Entertainment: Books",
+      value: "10",
+    },
     { name: "Entertainment: Film", label: "Entertainment: Film", value: "11" },
+    {
+      name: "Entertainment: Music",
+      label: "Entertainment: Music",
+      value: "12",
+    },
+    {
+      name: "Entertainment: Musicals & Theatres",
+      label: "Entertainment: Musicals & Theatres",
+      value: "13",
+    },
+    {
+      name: "Entertainment: Television",
+      label: "Entertainment: Television",
+      value: "14",
+    },
+    {
+      name: "Entertainment: Video Games",
+      label: "Entertainment: Video Games",
+      value: "15",
+    },
+    {
+      name: "Entertainment: Board Games",
+      label: "Entertainment: Board Games",
+      value: "16",
+    },
+    { name: "Science & Nature", label: "Science & Nature", value: "17" },
+    { name: "Science: Computers", label: "Science: Computers", value: "18" },
+    {
+      name: "Science: Mathematics",
+      label: "Science: Mathematics",
+      value: "19",
+    },
+    { name: "Mythology", label: "Mythology", value: "20" },
+    { name: "Sports", label: "Sports", value: "21" },
+    { name: "Geography", label: "Geography", value: "22" },
+    { name: "History", label: "History", value: "23" },
+    { name: "Politics", label: "Politics", value: "24" },
+    { name: "Art", label: "Art", value: "25" },
+    { name: "Celebrities", label: "Celebrities", value: "26" },
+    { name: "Animals", label: "Animals", value: "27" },
+    { name: "Vehicles", label: "Vehicles", value: "28" },
+    {
+      name: "Entertainment: Comics",
+      label: "Entertainment: Comics",
+      value: "29",
+    },
+    { name: "Science: Gadgets", label: "Science: Gadgets", value: "30" },
+    {
+      name: "Entertainment: Japanese Anime & Manga",
+      label: "Entertainment: Japanese Anime & Manga",
+      value: "31",
+    },
+    {
+      name: "Entertainment: Cartoon & Animations",
+      label: "Entertainment: Cartoon & Animations",
+      value: "32",
+    },
   ];
-
   const selectDifficulty = [
     { name: "Any Difficulty", label: "Any Difficulty", value: "any" },
     { name: "Easy", label: "Easy", value: "easy" },
@@ -30,11 +90,10 @@ function Home() {
   ];
 
   const fetchQuestions = async () => {
-    // let url = https://opentdb.com/api.php?amount=${number}&category=${category}&difficulty=${difficulty}&type=${type}
     let url = `https://opentdb.com/api.php?amount=${number}`;
-    if (category !== "any") `url += &category=${category}`;
-    if (difficulty !== "any") `url += &difficulty=${difficulty}`;
-    if (type !== "any") `url += &type=${type}`;
+    if (category !== "any") url += `&category=${category}`;
+    if (difficulty !== "any") url += `&difficulty=${difficulty}`;
+    if (type !== "any") url += `&type=${type}`;
     console.log(url);
 
     try {
